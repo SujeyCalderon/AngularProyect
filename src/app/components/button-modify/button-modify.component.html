@@ -1,0 +1,17 @@
+<h2>Modificar Empleado</h2>
+<form #form="ngForm" (ngSubmit)="onSave(form)">
+  <label for="name">Nombre:</label>
+  <input type="text" id="name" name="name" [(ngModel)]="employee.name" required />
+
+  <label for="position">Posición:</label>
+  <input type="text" id="position" name="position" [(ngModel)]="employee.position" required />
+
+  <label for="department">Departamento:</label>
+  <input type="text" id="department" name="department" [(ngModel)]="employee.department" required />
+
+  <label for="salary">Salario:</label>
+  <input type="text" id="salary" name="salary" [(ngModel)]="employee.salary" required />
+
+  <button type="submit">Guardar</button>
+  <button type="button" (click)="onCancel()">Cancelar</button>
+</form>
